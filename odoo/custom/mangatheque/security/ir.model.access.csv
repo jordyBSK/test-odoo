@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_mangatheque_manga,acces Manga,mangatheque.model_mangatheque_manga,mangatheque.manga_group_user,1,1,1,1
+access_manga_user,manga access for user,model_mangatheque_manga,manga_group_user,1,1,1,1
+access_manga_manager,manga access for manager,model_mangatheque_manga,manga_group_manager,1,1,1,1
