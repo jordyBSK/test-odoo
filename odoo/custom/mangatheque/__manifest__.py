@@ -8,5 +8,6 @@
         'security/ir.model.access.csv',
         'views/menu.xml',
         'views/manga.xml',
+        'wizard/note.xml',
     ]
 }

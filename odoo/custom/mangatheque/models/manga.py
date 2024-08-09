@@ -12,6 +12,10 @@ class Manga(models.Model):
 
     etat = fields.Char("Etat",default="Disponible", readonly=True)
 
+    note = fields.Integer("note sur 10", readonly=True)
+
+
+
     def mon_button(self):
         if self.etat == "Disponible":
             self.etat = "Emprunté"
