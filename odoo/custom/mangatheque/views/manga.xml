@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_manga_tree" model="ir.ui.view">
+        <field name="name">manga Tree</field>
+        <field name="model">manga</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="annee_parution"/>
+                <field name="auteur"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_form_manga" model="ir.ui.view">
+        <field name="name">manga form</field>
+        <field name="model">manga</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="annee_parution"/>
+                        </group>
+                        <group>
+                            <field name="auteur"/>
+                            <field name="image_couverture" widget="image"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+    <menuitem id="menu_manga" name="Mangathèque" />
+
+    <record id="action_manga_list" model="ir.actions.act_window">
+        <field name="name">liste des mangas</field>
+        <field name="res_model">manga</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_manga_list"
+              name="liste des mangas"
+              parent="menu_manga"
+              action="action_manga_list"/>
+
+</odoo>

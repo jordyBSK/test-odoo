@@ -1,36 +1,12 @@
-# -*- coding: utf-8 -*-
 {
-    'name': "mangatheque",
-
-    'summary': "application de gestion des manga",
-
-    'description': """
-    Cette application vous permet de gérer tous vos mangas.
-    """,
-
-    'author': "jordyBSK",
+    'name': "manga Management System",
+    'author': "JordyBSK",
     'website': "https://github.com/jordyBSK/",
+    'summary': 'Odoo 16 Development',
     'application': True,
-
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
-
-    # any module necessary for this one to work correctly
-    'depends': ['base'],
-
-    # always loaded
     'data': [
-        'security/manga_security.xml',
         'security/ir.model.access.csv',
-        #views/menus.xml
-        #'views/views.xml',
-        #'views/templates.xml',
-    ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
+        'views/menu.xml',
+        'views/manga.xml',
+    ]
 }
