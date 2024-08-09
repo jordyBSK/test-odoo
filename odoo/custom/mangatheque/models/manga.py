@@ -10,4 +10,10 @@ class Manga(models.Model):
     auteur = fields.Many2one("res.partner", string="Auteur")
     image_couverture = fields.Binary("Couverture")
 
-    etat = fields.Char("Etat",default="Disponible")
+    etat = fields.Char("Etat",default="Disponible", readonly=True)
+
+    def mon_button(self):
+        if self.etat == "Disponible":
+            self.etat = "Emprunté"
+        else:
+            self.etat = "Disponible"

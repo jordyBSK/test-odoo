@@ -7,6 +7,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
+                <field name="etat"/>
                 <field name="annee_parution"/>
                 <field name="auteur"/>
             </tree>
@@ -18,11 +19,19 @@
         <field name="model">manga</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <button string="Emprunter / Rapporter"
+                            type="object"
+                            name="mon_button"
+                            class="btn-primary"
+                            />
+                </header>
                 <sheet>
                     <group>
                         <group>
                             <field name="name"/>
                             <field name="annee_parution"/>
+                            <field name="etat"/>
                         </group>
                         <group>
                             <field name="auteur"/>
@@ -35,8 +44,7 @@
     </record>
 
 
-
-    <menuitem id="menu_manga" name="Mangathèque" />
+    <menuitem id="menu_manga" name="Mangathèque"/>
 
     <record id="action_manga_list" model="ir.actions.act_window">
         <field name="name">liste des mangas</field>
