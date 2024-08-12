@@ -9,5 +9,6 @@
         'views/menu.xml',
         'views/manga.xml',
         'wizard/note.xml',
+        'report/mangatheque.xml',
     ]
 }
